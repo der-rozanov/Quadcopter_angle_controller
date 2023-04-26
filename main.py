@@ -287,33 +287,4 @@ if __name__ == '__main__':
     pylab.tight_layout()
     pylab.show()
 
-'''        Wx_input_parameters = [100, 0.001, 0.1, Wx_des, Wx_cur, Wx_old_error, Wx_sum_error, dt]
-        Wx_impact = PID(Wx_input_parameters)  # calculate X axis impact
-        Pitch_cmd = Saturation(Wx_impact, 500, 0)
 
-        Wy_input_parameters = [100, 0.001, 0.1, Wy_des, Wy_cur, Wy_old_error, Wy_sum_error, dt]
-        Wy_impact = PID(Wy_input_parameters)  # calculate Y axis impact
-        Roll_cmd = Saturation(Wy_impact, 500, 0)
-
-        Wz_input_parameters = [500, 1, 1, Wz_des, Wz_cur, Wz_old_error, Wz_sum_error, dt]
-        Wz_impact = PID(Wz_input_parameters)  # calculate Z axis impact
-        Yaw_cmd = Saturation(Wz_impact, 10, -10)
-        
-        def PID(pid_input_parameters):  # [kp,ki,kd, setpoint, currentpoint, old_error, sum_error,dt]
-
-    # variables definition
-    kp = pid_input_parameters[0]  # PID Proportional parameter
-    ki = pid_input_parameters[1]  # PID Integral parameter
-    kd = pid_input_parameters[2]  # PID derivative parameter
-    set_point = pid_input_parameters[3]
-    current_point = pid_input_parameters[4]
-    old_error = pid_input_parameters[5]
-    sum_error = pid_input_parameters[6]
-    dt = pid_input_parameters[7]
-
-    # calculate PID impact
-    error = set_point - current_point
-    impact = kp * error + kd * ((error - old_error) / dt) + ki * sum_error
-
-    return impact
-'''
