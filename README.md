@@ -5,6 +5,7 @@ I add a new control circuit, that allow us to control angle. Because the coordin
 The signal go through angle PID and turns into desire command for angle speed PID controller, then the signal go through mixer and go to motors.
 
 So, we have this 
+
 ![Screenshot](screen.png)
 
 As we can see, it can control roll, yaw and pitch angles.
